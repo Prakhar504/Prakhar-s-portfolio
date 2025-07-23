@@ -8,19 +8,19 @@ import { portfolioConfig } from "@/config/portfolio.config";
 const skillPage = () => {
   return (
     // SKILLS PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden pt-30 mt-0 sm:pt-24 pt-15">
       <Badge variant="secondary" className="gap-1.5 py-1 ">
         <LightbulbIcon className="w-4 h-4" />
         My Skills
       </Badge>
       <div className="flex flex-col gap-3">
-        <Heading>My Technical Experience/Skills.</Heading>
+        <Heading><span className="text-[hsl(var(--accent))]">My Technical Experience/Skills.</span></Heading>
         <FramerWrapper y={0} x={200}>
-          <p className="font-poppins text-xl w-full text-primary max-sm:text-lg">
-            Currently i am a fresher and i have a solid understand of HTML5,
-            CSS3, JS, TS and React, including responsive design principles. I
-            specialize in building web applications and sites using Javascript,
-            Typescript, React, Nextjs & Node.
+          <p className="font-poppins text-xl w-full text-white max-sm:text-lg">
+            Currently I am a fresher and I have a solid understanding of <span className="text-[hsl(var(--accent))] font-bold">HTML5</span>,
+            <span className="text-[hsl(var(--accent))] font-bold"> CSS3</span>, <span className="text-[hsl(var(--accent))] font-bold">JS</span>, <span className="text-[hsl(var(--accent))] font-bold">TS</span> and <span className="text-[hsl(var(--accent))] font-bold">React</span>, including responsive design principles. I
+            specialize in building web applications and sites using <span className="text-[hsl(var(--accent))] font-bold">Javascript</span>,
+            <span className="text-[hsl(var(--accent))] font-bold"> Typescript</span>, <span className="text-[hsl(var(--accent))] font-bold">React</span>, <span className="text-[hsl(var(--accent))] font-bold">Nextjs</span> & <span className="text-[hsl(var(--accent))] font-bold">Node</span>.
           </p>
         </FramerWrapper>
         <FramerWrapper y={100} delay={0.3} className="block w-full">

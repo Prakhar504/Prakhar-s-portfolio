@@ -8,7 +8,7 @@ import { portfolioConfig } from "@/config/portfolio.config";
 const projectsPage = () => {
   return (
     // PROJECT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden pt-27 mt-0 sm:pt-24 pt-15">
       <Badge variant="secondary" className="gap-1.5 py-1 ">
         <Layers className="h-4 w-4" />
         Projects
@@ -16,7 +16,7 @@ const projectsPage = () => {
       <div className="flex flex-col gap-3">
         <Heading>My Projects</Heading>
         <FramerWrapper y={0} x={200}>
-          <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
+          <p className="font-poppins text-lg w-full text-white max-sm:text-base">
             I love to Build Cool Projects. Here, you&#x27;ll find a curated
             collection of my creative endeavors and technical projects. Each
             piece represents a journey of innovation, problem-solving, and

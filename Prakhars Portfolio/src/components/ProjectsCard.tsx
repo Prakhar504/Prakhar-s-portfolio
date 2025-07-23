@@ -30,7 +30,7 @@ const ProjectCards: React.FC<ProjectCardProps> = ({ value, num }) => {
       delay={num/4} 
       duration={0.15}
     >
-      <Card className="w-full h-full flex flex-col hover:shadow-lg transition-all duration-300 border-2">
+      <Card className="w-full h-full flex flex-col hover:shadow-lg transition-all duration-300 border-2 border-white">
         <CardHeader className="pb-2">
           <CardTitle className="text-xl font-bold text-primary">{value.title}</CardTitle>
         </CardHeader>

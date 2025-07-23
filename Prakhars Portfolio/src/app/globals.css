@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White */
+    --accent: 262 100% 75%; /* #b18cff purple */
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --primary: 262 100% 75%;
+    --primary-foreground: 0 0% 100%;
+    --border: 262 100% 75%;
+    --input: 262 100% 75%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --accent: 262 100% 75%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --primary: 262 100% 75%;
+    --primary-foreground: 0 0% 100%;
+    --border: 262 100% 75%;
+    --input: 262 100% 75%;
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: hsl(var(--background));
+    min-height: 100vh;
+    font-family: 'Nunito', Arial, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--accent));
+    font-family: 'Fredoka', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  p, .font-poppins, .font-rubik {
+    font-family: 'Nunito', Arial, sans-serif;
+  }
+  a {
+    color: hsl(var(--accent));
+    font-weight: bold;
+    text-decoration: none;
+  }
+  button, .btn, input[type="submit"] {
+    background: hsl(var(--accent));
+    color: hsl(var(--primary-foreground));
+    border-radius: var(--radius);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.5em 1.5em;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  button:hover, .btn:hover, input[type="submit"]:hover {
+    background: #a07cff;
+  }
+  input, textarea, select {
+    border: 2px solid hsl(var(--accent));
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-radius: var(--radius);
+    padding: 0.5em 1em;
+  }
+  ::placeholder {
+    color: #b18cff99;
+    opacity: 1;
+  }
+
+  /* Gradient Animation */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/* CUSTOM CSS */
+.name_underline::after {
+  content: "";
+  display: block;
+  width: 6rem;
+  height: .6rem;
+  background-color: hsl(var(--primary-sky));
+}
+
+.icon_underline::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  display: block;
+  width: 2rem;
+  height: .3rem;
+  background-color: hsl(var(--primary-sky));
+  margin-bottom: 2rem;
+}
+
+.education_point::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 46.7%;
+  left: -7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(var(--primary-sky));
+  outline: 3px solid hsl(var(--primary));
+  box-shadow: 0 2px 5px 2px hsl(var(--primary-sky));
+}
+
+/* TEXT ROTATOR STYLES */
+.animate-text-slide {
+  animation: text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite;
+}
+
+@keyframes text-slide {
+  0%,
+  16% {
+    transform: translateY(0%);
+  }
+  20%,
+  36% {
+    transform: translateY(-16.66%);
+  }
+  40%,
+  56% {
+    transform: translateY(-33.33%);
+  }
+  60%,
+  76% {
+    transform: translateY(-50%);
+  }
+  80%,
+  96% {
+    transform: translateY(-66.66%);
+  }
+  100% {
+    transform: translateY(-83.33%);
+  }
+}
+
+@keyframes blob1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-30px,20px) scale(1.08); }
+}
+@keyframes blob2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(40px,-10px) scale(0.95); }
+}
+.animate-blob1 { animation: blob1 5s ease-in-out infinite; }
+.animate-blob2 { animation: blob2 6s ease-in-out infinite; }
+
+/* Ensure navbar background is always on top */
+.navbar-bg {
+  z-index: 60;
+}

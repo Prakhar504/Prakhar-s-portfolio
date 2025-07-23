@@ -10,7 +10,7 @@ const HeroTexts = () => {
 
   return (
     <>
-      <h3 className="font-poppins text-3xl max-sm:text-xl">My Name is</h3>
+      <h3 className="font-poppins text-3xl max-sm:text-xl text-white">My Name is</h3>
       <h1 className="font-rubik text-8xl name_underline text-primary max-sm:text-6xl ">
         {firstName} {middleName} <br /> {lastName} .
       </h1>
