@@ -1,18 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental:{
-        serverComponentsExternalPackages: [
-            '@react-email/render',
-        ],
-        // images:{
-        //     remotePatterns:[
-        //         {
-        //             protocol: 'https',
-        //             hostname: 'cdn.jsdelivr.net',
-        //         }
-        //     ]
-        // }
-    }
-}
+  serverExternalPackages: [
+    '@react-email/render',
+  ],
+  // Optional: if you're using image optimization from external sources
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'cdn.jsdelivr.net',
+  //     },
+  //   ],
+  // },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
